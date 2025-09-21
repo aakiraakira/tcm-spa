@@ -136,6 +136,10 @@
             z-index: 1;
         }
         
+        #main-header:not(.header-scrolled) {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+        }
+
         .header-scrolled {
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -149,6 +153,8 @@
         /* Custom dropdown for treatments */
         .dropdown .dropdown-menu {
             display: none;
+            padding-top: 1rem; /* Invisible hover bridge */
+            margin-top: -1rem; /* Pull it up to fill the gap */
         }
         .dropdown:hover .dropdown-menu {
             display: block;
@@ -183,12 +189,14 @@
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="#home" class="nav-link text-white hover:text-gold transition">Home</a>
                 <div class="relative dropdown">
-                    <span class="text-white hover:text-gold transition cursor-pointer" id="treatments-menu-item">Treatments</span>
-                    <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50">
-                        <a href="#tcm-beauty-skincare" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Beauty Skincare</a>
-                        <a href="#tcm-tui-na-massage" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Tui Na Massage</a>
-                        <a href="#tcm-ginger-oil-therapy" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Ginger Oil Therapy</a>
-                        <a href="#tcm-wellness-heat-therapy" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Wellness Heat Therapy</a>
+                    <span class="text-white hover:text-gold transition cursor-pointer py-4" id="treatments-menu-item">Treatments</span>
+                    <div class="dropdown-menu absolute left-0 w-56 bg-transparent z-50">
+                        <div class="bg-white rounded-md shadow-lg py-1 mt-2">
+                            <a href="#tcm-beauty-skincare" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Beauty Skincare</a>
+                            <a href="#tcm-tui-na-massage" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Tui Na Massage</a>
+                            <a href="#tcm-ginger-oil-therapy" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Ginger Oil Therapy</a>
+                            <a href="#tcm-wellness-heat-therapy" class="nav-link-sub block px-4 py-2 text-charcoal hover:bg-jade hover:text-white">TCM Wellness Heat Therapy</a>
+                        </div>
                     </div>
                 </div>
                 <a href="#therapists" class="nav-link text-white hover:text-gold transition">Therapists</a>
@@ -809,7 +817,7 @@
                                 </ol>
                             </div>
                             <div class="md:w-1/2 mt-6 md:mt-0">
-                                <img src="https://images.unsplash.com/photo-1616394584738-65a5155b4618?q=80&w=1974&auto=format&fit=crop" alt="Jade Gua Sha tools used in TCM skincare" class="rounded-xl shadow-lg w-full h-full object-cover">
+                                <img src="https://www.cosmeticsdesign-asia.com/resizer/v2/GRSTXCYPSNM5ZE6EJR7QQPEZSA.jpg?auth=8ac4a115d94916c9a905df0a64da9270da1fe3c7912f6133abdf2955810d03e1" alt="TCM Beauty Skincare" class="rounded-xl shadow-lg w-full h-full object-cover">
                             </div>
                         </div>
                         <div>
@@ -848,7 +856,7 @@
                                  <p class="text-gray-700 mb-4">Tui Na is performed over clothing or a towel. The therapist will use a variety of techniques, including kneading, pressing, rolling, and rubbing, applying firm pressure to specific acupoints and meridians. The session is dynamic and focused on addressing your specific areas of concern.</p>
                             </div>
                             <div class="md:w-1/2 mt-6 md:mt-0">
-                                <img src="https://images.unsplash.com/photo-1519824145371-296894a0d72b?q=80&w=1974&auto=format&fit=crop" alt="Therapist performing Tui Na on a client's shoulder" class="rounded-xl shadow-lg w-full h-full object-cover">
+                                <img src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJvYXV0aCI6eyJjbGllbnRfaWQiOiJmcm9udGlmeS1maW5kZXIifSwicGF0aCI6ImloaC1oZWFsdGhjYXJlLWJlcmhhZFwvYWNjb3VudHNcL2MzXC80MDAwNjI0XC9wcm9qZWN0c1wvMjA5XC9hc3NldHNcLzc5XC8zOTk4NVwvN2JkZmEwZTI3YjEyODA5ZWU4NmViYjEwYjkwM2Y0NGYtMTY1ODMxOTg5Ny5qcGcifQ:ihh-healthcare-berhad:5lr8DQzK7BsZva0epr8-hPaE9rR06xzUsvF7fqeqq2A?format=webp" alt="TCM Tui Na Massage" class="rounded-xl shadow-lg w-full h-full object-cover">
                             </div>
                         </div>
                         <div>
@@ -887,7 +895,7 @@
                                  <p class="text-gray-700 mb-4">Your therapist will apply the warm ginger oil to your body, focusing on areas of concern. They will use a combination of Tui Na and gentle stroking massage techniques to ensure the oil penetrates deeply, creating a pleasant warming sensation that spreads through the muscles.</p>
                             </div>
                              <div class="md:w-1/2 mt-6 md:mt-0">
-                                <img src="https://images.unsplash.com/photo-1599544922915-643c51842881?q=80&w=1974&auto=format&fit=crop" alt="Therapist applying warm oil to a client's back" class="rounded-xl shadow-lg w-full h-full object-cover">
+                                <img src="https://nikura.com/cdn/shop/articles/10_Benefits_and_Uses_of_Ginger_Oil_1200x1200.jpg?v=1697474386" alt="TCM Ginger Oil Therapy" class="rounded-xl shadow-lg w-full h-full object-cover">
                             </div>
                         </div>
                         <div>
@@ -926,7 +934,7 @@
                                 <p class="text-gray-700 mb-4">You will lie comfortably while the therapist applies the heat source to targeted areas. If using herbal compresses, they will be steamed and applied in a pressing or rolling motion. The temperature is carefully monitored to ensure it is therapeutic but always comfortable, creating a deeply soothing and pleasant sensation.</p>
                             </div>
                             <div class="md:w-1/2 mt-6 md:mt-0">
-                                <img src="https://images.unsplash.com/photo-1600334024099-528383a1a3e5?q=80&w=1964&auto=format&fit=crop" alt="Hot stones used for wellness heat therapy on a client's back" class="rounded-xl shadow-lg w-full h-full object-cover">
+                                <img src="https://www.sunwaytcm.com/images/uploads/treatment/TCM_moxibustion-1.jpg" alt="TCM Wellness Heat Therapy" class="rounded-xl shadow-lg w-full h-full object-cover">
                             </div>
                         </div>
                         <div>
@@ -958,13 +966,14 @@
             
             if (treatmentsData[pageId]) {
                 const data = treatmentsData[pageId];
+                let finalContent = data.content.replace(/{IMAGE_URL}/g, data.imageUrl).replace(/{IMAGE_ALT}/g, data.imageAlt);
                 const treatmentTemplate = document.getElementById('treatment-page-template').innerHTML;
                 templateHtml = treatmentTemplate
                     .replace(/{IMAGE_URL}/g, data.imageUrl)
                     .replace(/{IMAGE_ALT}/g, data.imageAlt)
                     .replace(/{TITLE}/g, data.title)
                     .replace(/{SUBTITLE}/g, data.subtitle)
-                    .replace('<!-- Main Content Here -->', data.content);
+                    .replace('<!-- Main Content Here -->', finalContent);
                 document.title = `${data.title} | Revitalize Wellness Spa`;
             } else {
                 const template = document.getElementById(`${pageId}-template`);
